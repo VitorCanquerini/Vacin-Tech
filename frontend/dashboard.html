@@ -4,60 +4,32 @@
     <meta charset="UTF-8" />
     <title>Dashboard VacinTech - Monitoramento Real-Time</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nome+Da+Fonte&display=swap" rel="stylesheet">    
+    <!-- Estilo local -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="cabecalho">
-      <div id="vaccin">
-        <div class="logotipo">
-          <img
-            id="logo"
-            height="55px"
-            width="55px"
-            src="img/logo-VacinTech.png"
-          />
-        </div>
-        <div id="nome">
-          VACCIN<span style="color: rgb(42, 58, 85)">TECH </span>
-        </div>
-      </div>
-      <ul class="navegacao">
-        <li>
-          <a href="index.html#visao-geral">Visão Geral</a>
-        </li>
-        <li>
-          <a href="index.html#funcionalidades">Funcionalidades</a>
-        </li>
-        <li>
-          <a href="calculadora.html">Calculadora</a>
-        </li>
-        <li>
-          <a href="dashboard.html">Dashboard</a>
-        </li>
-        <li>
-          <a href="addVacina.html">Adicionar</a>
-        </li>
-      </ul>
-      <div class="perfilUsuario">
-        <div id="textoPerfil">
-          Olá, acesse sua conta<br />
-          <strong> ou faça seu cadastro</strong>
-        </div>
-        <img
-          id="fotoUsuario"
-          height="100px"
-          width="100px"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO14C3vuPxliUNKaNLf7tUwyKwS-fQKcmYXMQxVshpgaa7t_De"
-        />
-      </div>
-    </header>
+     <!-- inicio header -->
+        <header class="cabecalho">
+             <div><img class="img-logo" src="./img/logo-vaccintech.png" alt="logo-vaccintech"> </div>
+            <!-- TELA NAVEGAÇÃO -->
+            <ul class="navegacao">
+                <li><a href="#visao-geral">Visão Geral</a></li>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="addVacina.html">Adicionar</a></li>
+            </ul> <!-- FIM - TELA NAVEGAÇÃO -->
+            <a href="cadastro.html">
+                <div class="perfilUsuario">
+                    <div id="textoPerfil"> Olá acesse sua conta<br /> <strong> ou faça seu cadastro</strong> </div>
+                    <img id="fotoUsuario" class="img-usuario" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO14C3vuPxliUNKaNLf7tUwyKwS-fQKcmYXMQxVshpgaa7t_De" alt="Foto Perfil" />
+                </div>
+            </a>
+        </header>
+        <!-- fim header -->
+      
 
     <div class="containerP">
       <div class="topoInfo">

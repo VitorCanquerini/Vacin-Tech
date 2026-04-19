@@ -1,22 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    font-family: 'Inter', sans-serif;
     color: #5B6AC2;
-}
-
-html{
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-}
-
-.cabecalho{
     position: relative;
-    z-index: 10;
+  
 }
-
+.cabecalho {
+    display: flex;
+    height: 125px;
+    border-bottom: 3px solid #5B6AC2;
+    font-size: 16px;
+    width: 100%;
+}
 .navegacao {
     display: flex;
     font-size: 22px;
@@ -24,6 +29,24 @@ html{
     width: 800px;
     list-style: none;
 }
+
+.img-logo{
+    width: 250px;
+    margin-left:50px ;
+}
+
+.perfilUsuario {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+
+.img-usuario{
+    height: 100px;
+    width: 100px;
+}
+
 
 a {
     text-decoration: none;
@@ -38,22 +61,16 @@ h1 img{
     height: 400px;
     margin-bottom: 5px;
     
-}
 
-.cabecalho {
+}
+#textoPerfil {
     display: flex;
     height: 125px;
-    border-bottom: 3px solid #5B6AC2;
+    align-items: center;
+    flex-direction: column;
     font-size: 16px;
-    width: 100%;
-}
-
-.img {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.container {
-    font-family: 'Inter', sans-serif;
+    width: 200px;
+    margin-top: 85px;
 }
 
 #comeco {
@@ -64,9 +81,6 @@ h1 img{
     margin-bottom: 100px;
 }
 
-body {
-    margin: 0%;
-}
 
 .comecoTexto p {
     width: 700px;
@@ -97,12 +111,6 @@ body {
     
 }
 
-.perfilUsuario {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-}
-
 #fotoUsuario {
     display: flex;
     flex-direction: row;
@@ -110,15 +118,6 @@ body {
     margin-top: 58px;
 }
 
-#textoPerfil {
-    display: flex;
-    height: 125px;
-    align-items: center;
-    flex-direction: column;
-    font-size: 16px;
-    width: 200px;
-    margin-top: 85px;
-}
 
 .visaoGeral {
     display: flex;
@@ -618,5 +617,5 @@ h3{
     display: flex;
     justify-content: center; 
     align-items: center;     
-    height: calc(100vh - 125px);
+    height: calc(100vh - 100px);
 }
