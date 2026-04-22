@@ -261,10 +261,6 @@ h2{
 }
 
 
-
-
-
-
 #status-box {
   text-align: center;
   font-family: sans-serif;
@@ -272,14 +268,13 @@ h2{
 }
 
 .chart-container{
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
     border-radius: 20px;
     width: 980px;
     margin-top: 20px;
     margin-left: 80px;
 }
 .espe{
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
+    /* box-shadow: 0px 8px 20px rgba(0,0,0,0.7); */
     height: 150px;
     width: 980px;
     display: flex;
@@ -356,7 +351,7 @@ h2{
     border-radius: 20px;
     margin-left: 0px;
     padding: 15px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 
     display: flex;
     flex-direction: column;
@@ -399,11 +394,11 @@ h2{
 .novaCaixa{
     width: 505px;
     height: 450px;
-    background-color: #001538;
+    background-color: #fff;
     border-radius: 20px;
     padding: 20px;
     color: white;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -414,11 +409,13 @@ h2{
 
 
 .tituloTempo{
+    color: #5B6AC2;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 .tempoFora{
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px black;
 
 }
 
@@ -428,6 +425,7 @@ h2{
     padding:8px 12px;
     border-radius:10px;
     margin-bottom:6px;
+    color: #fff;
 }
 
 .perigo{
@@ -439,6 +437,7 @@ h2{
 }
 
 .ultimaHora{
+    color: black;
     margin-top:10px;
 }
 
@@ -466,11 +465,13 @@ h2{
 .dinheiro{
     font-size:35px;
     font-weight:bold;
+    color: black;
 
 }
 
 .descricao{
     font-size:14px;
+    color: black;
 }
 
 .critico{
@@ -479,6 +480,7 @@ h2{
     padding:8px;
     border-radius:10px;
     text-align:center;
+    color: #fff;
 }
 
 .att1{
