@@ -1,5 +1,5 @@
-CREATE DATABASE VaccinMonitorate1;
-USE VaccinMonitorate1;
+CREATE DATABASE VaccinTech;
+USE VaccinTech;
 
 CREATE TABLE Empresa (
     idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
