@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tela de Cadastro</h1>
+    Nome completo:<br />
+    <input
+      type="text"
+      id="input_nome"
+      placeholder="Insira o seu nome"
+    /><br /><br />
+    E-mail: <br />
+    <input
+      type="text"
+      id="input_email"
+      oninput="validarEmail()"
+      onfocus="mostrarEmail()"
+      placeholder="Insira o seu E-mail"
+    /><br /><br />
+    Senha: <br />
+    <input
+      type="text"
+      id="input_senha"
+      oninput="validarSenha()"
+      onfocus="validarSenha()"
+      placeholder="Insira a sua senha"
+    /><br /><br />
+    Confirmar senha: <br />
+    <input
+      type="password"
+      id="input_confirmar"
+      oninput="confirmarSenha()"
+      placeholder="Confirme a sua senha"
+    /><br />
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="div_mensagem"></div>
+  </body>
+</html>
+<script>
+  let validacaoEmail = false;
+  let validacaoSenha = false;
+  let validacaoConfirmacao = false;
+  function validarEmail() {
+    let email = input_email.value;
+    // let termina_com = email;
+    let mensagem = "";
+    if (email.endsWith(".com") || email.endsWith(".com.br")) {
+      validacaoEmail = true;
+
+      mensagem += `<span style='color:green'>✔ E-mail com extensões de domínio</span><br>`;
+    } else {
+      mensagem += `<span style='color:gray'>❌ E-mail deve conter TLD e ccTLD</span><br>`;
+    }
+
+    let temArroba = email.includes("@");
+
+    if (temArroba) {
+      mensagem += `<span style='color:green'>✔ Possui @</span><br>`;
+    } else {
+      mensagem += `<span style='color:gray'>❌ Não possui @</span><br>`;
+    }
+    div_mensagem.innerHTML = mensagem;
+  }
+  function mostrarEmail() {
+    div_mensagem.innerHTML = "";
+  }
+
+  function validarSenha() {
+    mostrarSenha();
+    let mensagem = "";
+    let senha = input_senha.value;
+    
+
+    if (senha.length >= 8) {
+      validacaoSenha = true;
+      mensagem += `<span style='color:green'>✔ 8 Caracteres </span><br>`;
+    } else {
+      mensagem += `<span style="color: gray;">❌ Mínimo 8 caracteres</span><br>`;
+    }
+
+    if (senha != senha.toLowerCase()) {
+      mensagem += `<span style='color:green'>✔ Possui letra maiúscula</span><br>`;
+    } else {
+      mensagem += `<span style="color: gray;">❌ Não possui letra maiúscula</span><br>`;
+    }
+
+    let temEspecial =
+      senha.includes("!") ||
+      senha.includes("_") ||
+      senha.includes("@") ||
+      senha.includes("#") ||
+      senha.includes("$") ||
+      senha.includes("%") ||
+      senha.includes("&") ||
+      senha.includes("*");
+    if (temEspecial) {
+      mensagem += `<span style='color:green'>✔ Possui caracter especial</span><br>`;
+    } else {
+      mensagem += `<span style="color: gray;">❌ Não possui caracter especial</span><br>`;
+    }
+
+    let temNumero =
+      senha.includes("0") ||
+      senha.includes("1") ||
+      senha.includes("2") ||
+      senha.includes("3") ||
+      senha.includes("4") ||
+      senha.includes("5") ||
+      senha.includes("6") ||
+      senha.includes("7") ||
+      senha.includes("8") ||
+      senha.includes("9");
+
+    if (temNumero) {
+      mensagem += `<span style='color:green'>✔ Possui número</span><br>`;
+    } else {
+      mensagem += `<span style="color: gray;">❌ Não possui número</span><br>`;
+    }
+    div_mensagem.innerHTML = mensagem;
+
+    function mostrarSenha() {
+      div_mensagem.innerHTML = "";
+    }
+  }
+
+  function confirmarSenha() {
+    let senha = input_senha.value;
+    let confirmar = input_confirmar.value;
+    let senhaconfirmada = confirmar;
+
+    if (senha === senhaconfirmada) {
+      validacaoConfirmacao = true;
+    } else {
+        validacaoConfirmacao = false;
+    }
+  }
+
+  function cadastrar() {
+    if (validacaoConfirmacao && validacaoEmail && validacaoSenha) {
+      window.location.href = "login.html";
+    }
+  }
+</script>

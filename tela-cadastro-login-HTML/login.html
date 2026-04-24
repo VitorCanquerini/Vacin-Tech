@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <h1>Tela de Login</h1>
+    E-mail: <br>
+    <input type="text" id="input_entrada" placeholder="Insira o seu E-mail"><br><br>
+    Senha: <br>
+    <input type="password" id="input_senha" placeholder="Insira a sua senha"><br><br>
+    <button onclick="entrar()">Entrar</button>
+    <div id="mensagem"></div> <br>
+    Não possui cadastro?<a href="cadastro.html"> Clique aqui!</a>
+</body>
+</html>
+<script>
+    function entrar(){  
+        let entrada = input_entrada.value;
+        let senha = input_senha.value;
+        
+        if (entrada == 'helo'){
+            mensagem.innerHTML = ``
+        } else {
+            mensagem.innerHTML = `<span style="color: red;">E-mail ou senha incorretos</span>`
+        }
+        if (senha == '123'){
+            mensagem.innerHTML = ``
+        } else {
+            mensagem.innerHTML = `<span style="color: red;">E-mail ou senha incorretos</span>`
+        } 
+   // window.location.href = "cadastro.html"
+   
+   }
+</script>
