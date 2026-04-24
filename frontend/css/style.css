@@ -264,7 +264,12 @@ h2{
     height: 300px;
 }
 
-
+.containerP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 #status-box {
   text-align: center;
   font-family: sans-serif;
